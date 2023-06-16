@@ -1,0 +1,79 @@
+{
+	"documentDefinitions": {
+		"infosec": {
+			"icon": "infosec.png",
+			"displayName": "DOCUMENT_TYPES.infosec",
+			"labelAttribute": "infosec",
+			"validFromAttribute": "infosecStartDate",
+			"validToAttribute": "infosecEndDate",
+			"dataModelRecordExtractor": "com.quantexa.infosec.model.infosec.infosecExtractor",
+			"dataModelRootClass": "com.quantexa.infosec.model.infosec.infosecModel.infosec",
+			"recordDataLocation": "NOT_USED",
+			"documentDataLocation": "NOT_USED"
+		}
+	},
+	"elementDefinitions": {
+		"flatNumber": {
+			"exclusionCriteria": []
+		},
+		"houseNumberHouseName": {
+			"exclusionCriteria": []
+		},
+		"postcode": {
+			"exclusionCriteria": []
+		},
+		"countryCode": {
+			"exclusionCriteria": []
+		},
+		"forenameMetaphone1": {
+			"exclusionCriteria": []
+		},
+		"surname": {
+			"exclusionCriteria": []
+		},
+		"forename": {
+			"exclusionCriteria": []
+		},
+		"road": {
+			"exclusionCriteria": []
+		}
+	},
+	"compoundDefinitions": {
+		"flatNumber_houseNumberHouseName_postcode_countryCode": {
+			"documentDefinitions": [
+				"infosec"
+			],
+			"elementDefinitions": [
+				"flatNumber",
+				"houseNumberHouseName",
+				"postcode",
+				"countryCode"
+			]
+		},
+		"forenameMetaphone1_surname_flatNumber_houseNumberHouseName_postcode": {
+			"documentDefinitions": [
+				"infosec"
+			],
+			"elementDefinitions": [
+				"forenameMetaphone1",
+				"surname",
+				"flatNumber",
+				"houseNumberHouseName",
+				"postcode"
+			]
+		},
+		"forename_surname_flatNumber_houseNumberHouseName_road_postcode": {
+			"documentDefinitions": [
+				"infosec"
+			],
+			"elementDefinitions": [
+				"forename",
+				"surname",
+				"flatNumber",
+				"houseNumberHouseName",
+				"road",
+				"postcode"
+			]
+		}
+	}
+}
